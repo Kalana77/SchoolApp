@@ -9,11 +9,18 @@ import java.sql.SQLException;
 
 public class StudentDao {
 
+    private static StudentDao studentDao = new StudentDao();
+
+    private StudentDao() {}
+
+    public static StudentDao getStudentDao(){
+        return studentDao;
+    }
     public void createStudent(Student stu) {
 
         try {
             Connection connection = DbConnector.getConnection();
-            String query = "insert into student(fname,lname,email,index_no,address,mobil_no) values (?,?,?,?,?,?)";
+            String query = "insert into student(fname,lname,email,index_no,address,mobile_no) values (?,?,?,?,?,?)";
             PreparedStatement prestm = connection.prepareStatement(query);
             prestm.setString(1,stu.getFname());
             prestm.setString(2,stu.getLname());
@@ -21,6 +28,7 @@ public class StudentDao {
             prestm.setString(4,stu.getIndexNo());
             prestm.setString(5,stu.getAddress());
             prestm.setString(6,stu.getMobileNum());
+            prestm.execute();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }

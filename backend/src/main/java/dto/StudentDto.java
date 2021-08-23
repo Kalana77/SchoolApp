@@ -57,4 +57,16 @@ public class StudentDto {
     public void setMobileNum(String mobileNum) {
         this.mobileNum = mobileNum;
     }
+
+    @Override
+    public String toString() {
+        return "StudentDto{" +
+                "fname='" + fname + '\'' +
+                ", lname='" + lname + '\'' +
+                ", email='" + email + '\'' +
+                ", indexNo='" + indexNo + '\'' +
+                ", address='" + address + '\'' +
+                ", mobileNum='" + mobileNum + '\'' +
+                '}';
+    }
 }

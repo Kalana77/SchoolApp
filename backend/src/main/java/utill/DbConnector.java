@@ -7,6 +7,8 @@ public class DbConnector {
 
     private static Connection con;
 
+    private static DbConnector dbConnector = new DbConnector();
+
     private DbConnector() {
 
         try {
@@ -22,5 +24,5 @@ public class DbConnector {
     public static Connection getConnection() {
         return con;
     }
-    
+
 }
