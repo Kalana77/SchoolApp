@@ -3,7 +3,9 @@ package com.kalana.schoolapp.service;
 import com.kalana.schoolapp.domain.Student;
 import com.kalana.schoolapp.dto.StudentDto;
 import com.kalana.schoolapp.repository.StudentDao;
+import org.springframework.stereotype.Service;
 
+@Service
 public class StudentService {
     private static StudentService studentService = new StudentService();
 

@@ -2,11 +2,13 @@ package com.kalana.schoolapp.repository;
 
 import com.kalana.schoolapp.domain.Student;
 import com.kalana.schoolapp.utill.DbConnector;
+import org.springframework.stereotype.Repository;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
+@Repository
 public class StudentDao {
 
     private static StudentDao studentDao = new StudentDao();
