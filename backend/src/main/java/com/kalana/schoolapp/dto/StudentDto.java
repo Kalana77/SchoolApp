@@ -1,4 +1,4 @@
-package dto;
+package com.kalana.schoolapp.dto;
 
 public class StudentDto {
     private String fname;

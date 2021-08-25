@@ -1,8 +1,8 @@
-package service;
+package com.kalana.schoolapp.service;
 
-import domain.Student;
-import dto.StudentDto;
-import repository.StudentDao;
+import com.kalana.schoolapp.domain.Student;
+import com.kalana.schoolapp.dto.StudentDto;
+import com.kalana.schoolapp.repository.StudentDao;
 
 public class StudentService {
     private static StudentService studentService = new StudentService();
@@ -14,7 +14,7 @@ public class StudentService {
     }
 
     public void createStudent(StudentDto studentDto) {
-        System.out.println("create student service layer " + studentDto);
+        System.out.println("create student com.kalana.schoolapp.service layer " + studentDto);
         StudentDao studentDao = StudentDao.getStudentDao();
 
         Student student = new Student();

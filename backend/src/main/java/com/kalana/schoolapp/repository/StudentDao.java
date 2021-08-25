@@ -1,7 +1,7 @@
-package repository;
+package com.kalana.schoolapp.repository;
 
-import domain.Student;
-import utill.DbConnector;
+import com.kalana.schoolapp.domain.Student;
+import com.kalana.schoolapp.utill.DbConnector;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -16,6 +16,7 @@ public class StudentDao {
     public static StudentDao getStudentDao(){
         return studentDao;
     }
+
     public void createStudent(Student stu) {
 
         try {

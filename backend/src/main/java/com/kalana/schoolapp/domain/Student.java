@@ -1,4 +1,4 @@
-package domain;
+package com.kalana.schoolapp.domain;
 
 public class Student {
     private long id;

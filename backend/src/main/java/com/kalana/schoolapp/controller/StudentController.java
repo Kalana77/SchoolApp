@@ -1,7 +1,7 @@
-package controller;
+package com.kalana.schoolapp.controller;
 
-import dto.StudentDto;
-import service.StudentService;
+import com.kalana.schoolapp.dto.StudentDto;
+import com.kalana.schoolapp.service.StudentService;
 
 public class StudentController {
     public void createStudent(StudentDto studentDto){

@@ -1,4 +1,4 @@
-package utill;
+package com.kalana.schoolapp.utill;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
