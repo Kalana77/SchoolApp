@@ -11,14 +11,6 @@ import java.sql.SQLException;
 @Repository
 public class StudentDao {
 
-    private static StudentDao studentDao = new StudentDao();
-
-    private StudentDao() {}
-
-    public static StudentDao getStudentDao(){
-        return studentDao;
-    }
-
     public void createStudent(Student stu) {
 
         try {
@@ -35,7 +27,6 @@ public class StudentDao {
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
-
 
     }
 

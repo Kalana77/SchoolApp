@@ -3,21 +3,17 @@ package com.kalana.schoolapp.service;
 import com.kalana.schoolapp.domain.Student;
 import com.kalana.schoolapp.dto.StudentDto;
 import com.kalana.schoolapp.repository.StudentDao;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class StudentService {
-    private static StudentService studentService = new StudentService();
 
-    private StudentService(){}
-
-    public static StudentService getStudentService() {
-        return studentService;
-    }
+    @Autowired
+    private StudentDao studentDao;
 
     public void createStudent(StudentDto studentDto) {
         System.out.println("create student com.kalana.schoolapp.service layer " + studentDto);
-        StudentDao studentDao = StudentDao.getStudentDao();
 
         Student student = new Student();
         student.setFname(studentDto.getFname());
