@@ -27,4 +27,17 @@ public class StudentService {
 
     }
 
+    public StudentDto getStudent(long sid) {
+
+        Student student = studentDao.getStudent(sid);
+        StudentDto studentDto = new StudentDto();
+        studentDto.setFname(student.getFname());
+        studentDto.setLname(student.getLname());
+        studentDto.setAddress(student.getAddress());
+        studentDto.setEmail(student.getEmail());
+        studentDto.setIndexNo(student.getIndexNo());
+        studentDto.setMobileNum(student.getMobileNum());
+
+        return studentDto;
+    }
 }
