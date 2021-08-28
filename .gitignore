@@ -1,2 +1,6 @@
 /backend/.idea/
 /backend/target/
+backend/.settings/*
+backend/.classpath
+backend/.vscode/*
+backend/.project
